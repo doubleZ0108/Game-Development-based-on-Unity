@@ -78,9 +78,9 @@ public class Tank : MonoBehaviour
         /* 发射炮弹 */
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Rigidbody freshMuzzle = Instantiate<Rigidbody>(muzzlePrefab);
-            freshMuzzle.transform.position = muzzle.position;
-            freshMuzzle.velocity = muzzle.forward * 10.0f;
+            Rigidbody freshMuzzle = Instantiate<Rigidbody>(muzzlePrefab);   //复制一个prefab炮弹
+            freshMuzzle.transform.position = muzzle.position;               //设置位置为标定的炮口位置
+            freshMuzzle.velocity = muzzle.forward * 10.0f;                  //设置发射初速度
         }
     }
 }
