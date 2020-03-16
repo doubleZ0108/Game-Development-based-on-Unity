@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankScript : MonoBehaviour
+public class Tank : MonoBehaviour
 {
     public Transform turrentHinge;
     public Transform gunHinge;
+
     private double gunZDegree;
     public double maxElevationGun = 10.0f;           //炮台最大仰角
     public double maxDepressionofGun = -20.0f;       //炮台最大俯角
+
+    public Transform muzzle;
+    public Rigidbody muzzlePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +26,7 @@ public class TankScript : MonoBehaviour
         /* 前进 后退 */
         if (Input.GetKey(KeyCode.W))
         {
-            //this.transform.Translate(Time.deltaTime * 1.0f, 0.0f, 0.0f, Space.Self);
-            this.transform.localPosition += transform.forward * 1.0f * Time.deltaTime;
+            this.transform.Translate(Time.deltaTime * 1.0f, 0.0f, 0.0f, Space.Self);
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -70,6 +73,14 @@ public class TankScript : MonoBehaviour
             {
                 gunHinge.Rotate(0.0f, 0.0f, Time.deltaTime * -20.0f, Space.Self);
             }
+        }
+
+        /* 发射炮弹 */
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Rigidbody freshMuzzle = Instantiate<Rigidbody>(muzzlePrefab);
+            freshMuzzle.transform.position = muzzle.position;
+            freshMuzzle.velocity = muzzle.forward * 10.0f;
         }
     }
 }
