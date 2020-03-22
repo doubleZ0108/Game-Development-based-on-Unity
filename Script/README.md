@@ -26,19 +26,24 @@
 - `Update()`：逐帧执行
   - `Time.deltaTime`：上一帧到下一帧的时间间隔
 - `LateUpdate()`：Update之后执行（别的东西完全跑完，在这里获取信息）
+  - e.g. following third-person camera
 - `OnApplicationPause()`：切换窗口，游戏暂停
 - `OnApplicationQuit()`：提醒别人我要走了
 - `OnDestroy()`: 程序关闭或把该对象删了的时候调一次，清理自己的东西
 
 > 不要在Start中涉及到其他类的方法，因为脚本的执行顺序是不确定的，应该提供一个Manager管理多个class的初始化
 
-- **Debug**
-  - `OnDraw()`
+- **Debug Tools**
+  - `OnGUI()`
   - `OnDrawGizmos()`
 
 
 
-### Variables
+<br />
+
+------
+
+## Variables
 
 - **Serialization**
 
@@ -46,10 +51,10 @@
 
     ```c#
     [System.Serializable]
-    public class MyClass {}
+    public class MyClass {}		//用户自定义的类
     
     [SerializeField]
-    private float time = 0;
+    private float time = 0;		//private字段
     ```
 
   - not static
@@ -57,6 +62,8 @@
   - not const
 
   - not readonly
+  
+  <img src="README.assets/image-20200322184550398.png" alt="image-20200322184550398" width="40%;" />
 
 <br />
 
@@ -75,6 +82,10 @@
 
 
 
+<br />
+
+------
+
 ## Coroutine
 
 - 新手指导
@@ -83,20 +94,48 @@
 
 
 
-## Time and Framerate
+<br />
+
+------
+
+## Time and Framerate Management
 
 - 平滑的移动要乘deltaTime
 - 
 
 
 
+<br />
+
+------
+
 ## Event System
 
 
 
+<br />
 
+------
+
+## Input Module & Input Event
+
+
+
+
+
+<br />
+
+------
 
 ## Folders
 
 - Assets: 最重要
 - Resources：
+
+
+
+<br />
+
+------
+
+## Commonly Used Classes
