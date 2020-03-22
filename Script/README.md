@@ -71,14 +71,45 @@
 
 ## Components & GameObjects
 
-- 寻找
-  - get component
+- **Accessing | 获取(寻找)**
+  
+  - `GetComponent<T>()`
+  
+    - `GetComponentInParent<>()`
+    - `GetComponentInChildern<>()`
+  
+    ```c#
+    muzzle.GetComponent<Rigidbody>().velocity = new Vector3(10.0f, 0.0f, 0.0f);
+    ```
+  
+  - Finding child GameObject
+  
+    ```c#
+    foreach (Transform t in transform)
+    {
+      Debug.Log(t.gameObject.name);
+    }
+    ```
+  
+  - Accessing by name：效率低，难维护，Start中可以用，Update别用
+  
+    - `transform.Find("something")`
+    - `GameObject.Find("xx")`
+    - `GameObject.FindWithTag("yy")`
+  
   - find object
+    
     - transform.find找不到父亲的
+  
 - **Creating**
+
+  - `Instantiate()`： copy a existing GameObject
+  - `new GameObject()`：add a empty GameObject in the scene
+  - `AddComponent<Rigidbody>()`
+
 - **Destroy**
-  - destroy(this)是把脚本干掉
-  - 应该是destroy gameobject
+  - `Destroy(this)`是把脚本干掉
+  - 应该是`Destroy(gameObject)`
 
 
 

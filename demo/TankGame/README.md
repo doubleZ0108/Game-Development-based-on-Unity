@@ -20,13 +20,13 @@ Table of Contents
 
 ## Model
 
-<img src="../../README.assets/image-20200316201219577.png" alt="image-20200316201219577" width="60%;" />
+<img src="README.assets/image-20200316201219577.png" alt="image-20200316201219577" width="60%;" />
 
 ### Coordinate System Scaling
 
 ⚠️以下调整都需要在`Pivot`模式下进行<img src="../../README.assets/image-20200316151329284.png" alt="image-20200316151329284" width="20%;" />
 
-<img src="../../README.assets/image-20200316144953074.png" alt="image-20200316144953074" width="30%;" />
+<img src="README.assets/image-20200316144953074.png" alt="image-20200316144953074" width="30%;" />
 
 1. 正常建完模型由于child的坐标系是基于parent的，而parent改变了scale，导致child坐标系不是笛卡尔坐标系，所以旋转起来每个轴动的尺寸不一样(local coordinate system become non-Cartesian, axis are different in unit length)
 
@@ -34,11 +34,11 @@ Table of Contents
    >
    > 1. 初始object tree
    >
-   >    <img src="../../README.assets/image-20200316145921162.png" alt="image-20200316145921162" width="30%;" />
+   >    <img src="README.assets/image-20200316145921162.png" alt="image-20200316145921162" width="30%;" />
    >
    > 2. 把Turret从树中拉出来，创建一个新的TurretAdaptor，将其`Position`全设置为0  => 将Turret放到TurretAdaptor中 => 再将TurretAdaptor放到Torso中
    >
-   >    <img src="../../README.assets/image-20200316145853874.png" alt="image-20200316145853874" width="20%;" /><img src="../../README.assets/image-20200316145834514.png" alt="image-20200316145834514" width="50%;" />
+   >    <img src="README.assets/image-20200316145853874.png" alt="image-20200316145853874" width="20%;" /><img src="README.assets/image-20200316145834514.png" alt="image-20200316145834514" width="50%;" />
    >
    > 3. Turret可能会fly到一个随机位置，把它重新拖回来就好了
    >
@@ -54,7 +54,7 @@ Table of Contents
 
    <br />
 
-<img src="../../README.assets/image-20200316150447023.png" alt="image-20200316150447023" width="25%;" />
+<img src="README.assets/image-20200316150447023.png" alt="image-20200316150447023" width="25%;" />
 
 2. 炮台的旋转中心不是我们期待的位置
 
@@ -72,7 +72,7 @@ Table of Contents
 
 ### 1. Add public fields and Assign objects
 
-<img src="../../README.assets/image-20200316202137434.png" alt="image-20200316202137434" width="50%;" />
+<img src="README.assets/image-20200316202137434.png" alt="image-20200316202137434" width="50%;" />
 
 ### 2. Movement
 
