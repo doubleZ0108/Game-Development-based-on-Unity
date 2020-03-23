@@ -246,21 +246,44 @@ public class xxx : MonoBehaviour, IPointerClickHandler
   - `Standalone Input Module`
   - `Physics Raycaster`
 
-
-
 <br />
 
 ------
 
-## Folders
+## Folders in Project
 
-- Assets: 最重要
-- Resources：
-
-
+- **Assets**: 最重要
+  - APIs using string paths to reference asset都是从这个文件夹中定位的
+- **Resources**：load Assets on-demand from a script instead of creating instances of them in a scene
+  - `Resources.Load` to load them
+- **Editor**
+  - Scripts in this are treated as Editor scripts rather than runtime scripts
+- **Gizmos**: add graphics to the Scene view
+  - custom icons
+- **Plugins**: add plug-ins (e.g. DLLs written in C/C++)
 
 <br />
 
 ------
 
 ## Commonly Used Classes
+
+- **Basic**
+  - Mathf, Math classes
+  - Vector3, Vector2, Quaternion
+- **Transform**
+- **Rigidbody**: basic component of physics system
+- **Input**: give access to device input
+  - `Edit -> Project Settings -> Input`可以设置键盘，手柄等的键位（但注意只能是提前设定好，不能是runtime）、
+- **Resources**: load assets in-demand <u>from disk</u>
+  - `Resources.LoadAsync`
+  - `Resources.Load<T>`: loading a prefab, directly access its component
+- **Scene Management**
+  - `File -> Build Setting`
+  - `SceneManager.LoadScene`
+    - Single: remove the old scene
+    - Additive: keep the old one
+  - `Object.DontDestroyOnLoad`: when a scene is removed, all GameObjects in it will be destroyed, using this can keep forever
+- **Application**: access to application run-time data, related to OS
+  - `Application.Quit()`
+  - `Application.streamingAssetPath`: streaming assets folder path
