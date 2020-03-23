@@ -139,11 +139,42 @@
 
 ## Coroutine
 
-- 新手指导
-- 让子弹一点点的加速
-- 并不是多线程，如果不写yield，主线程就卡住了
+a function that has the ability to pause execution and return control to Unity, but then to continue at a defined point
 
+- call 一个函数，它都是在一帧中完成的
 
+  > ```c#
+  > private void Accelerate(Rigidbody rigidbody, Vector3 speed){
+  >   for (int i=0; i< 20; ++i){
+  >     rigidbody.velocity += speed;
+  >   }
+  > }
+  > ```
+  >
+  > 希望让子弹一点点的加速，这个函数会在一帧中跑完，瞬间加速到很高
+
+  
+
+- **yield return**
+
+  - `Null`: coroutine will continue after all Update functions have been called on the next frame
+  - `WaitForSeconds(int)`
+  - `WaitForFixedUpdate`: continue after all FixedUpdate has been called on all scripts
+  - `WaitUnitl/WaitWHile(Func<bool>)`: continue after the supplied delegate evaluates to true/false
+  - `WWW`: wait for a http response
+
+- **stop coroutine**
+
+  - `StopAllCoroutines()`
+  - `StopCoroutine(xxx)`
+
+- **应用**：新手指导
+
+- **原理**
+
+  - pausing is not a Unity invention, but a language feature of C#
+  - `StartCoroutine`必须用在MonoBehavior class内部：MonoBehavior负责记录corountine
+  - 并不是多线程，如果不写yield，主线程就卡住了
 
 <br />
 
