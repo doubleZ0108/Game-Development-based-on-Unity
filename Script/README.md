@@ -206,7 +206,21 @@ a function that has the ability to pause execution and return control to Unity, 
 
 ## Event System
 
+- define targets of custom messages and to send messages to GameObjects
 
+```c#
+public class EventTarget : MonoBehaviour, ICustomMessageTarget {
+  public void doSomething(string message){
+    Debug.Log("do something " + mewwage);
+  }
+}
+
+ExecuteEvents.Execute<ICustomMessageTarget>(
+	target,
+  null,
+  (x,y) => x.doSomething("my message");
+);
+```
 
 <br />
 
@@ -214,7 +228,23 @@ a function that has the ability to pause execution and return control to Unity, 
 
 ## Input Module & Input Event
 
+receive user input, translate it to events and then send them to controls in the game
 
+```c#
+using UnityEngine.EventSystems;
+
+public class xxx : MonoBehaviour, IPointerClickHandler
+{
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("click!");
+    }
+}
+```
+
+- **Components**
+  - `Standalone Input Module`
+  - `Physics Raycaster`
 
 
 
