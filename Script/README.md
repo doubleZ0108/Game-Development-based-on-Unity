@@ -32,10 +32,30 @@
 - `OnDestroy()`: 程序关闭或把该对象删了的时候调一次，清理自己的东西
 
 > 不要在Start中涉及到其他类的方法，因为脚本的执行顺序是不确定的，应该提供一个Manager管理多个class的初始化
+>
+> 可以在`Edit -> Project Settings -> Script Execution Order`中制定
 
-- **Debug Tools**
+<img src="README.assets/image-20200322192801997.png" alt="image-20200322192801997" width="75%;" />
+
+
+
+### Debug Tools
+
+- **Immediate Mode GUI system(IMGUI)**
+
   - `OnGUI()`
-  - `OnDrawGizmos()`
+
+  <img src="README.assets/image-20200323144357089.png" alt="image-20200323144357089" width="50%;" />
+
+- **Gizmos**: graphics associated with GameObjects
+
+  - Light Gizmos, Transform Gizmos, Camera Gizmos, etc.
+
+  - `	OnDrawGizmos()`: 在最终的Game窗口不会显示
+
+    
+
+  <img src="README.assets/image-20200323145028363.png" alt="image-20200323145028363" width="50%;" />
 
 
 
