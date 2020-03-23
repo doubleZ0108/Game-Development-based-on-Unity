@@ -1,16 +1,6 @@
 # Tank Game
 
-Table of Contents
-=================
-
-   * [Tank Game](#tank-game)
-      * [Model](#model)
-         * [Coordinate System Scaling](#coordinate-system-scaling)
-      * [Tank-Style Maneuver Logic](#tank-style-maneuver-logic)
-         * [1. Add public fields and Assign objects](#1-add-public-fields-and-assign-objects)
-         * [2. Movement](#2-movement)
-         * [3. Turret Behavior](#3-turret-behavior)
-         * [4. Shooting Logic](#4-shooting-logic)
+[toc]
 
 ------
 
@@ -108,3 +98,85 @@ freshMuzzle.transform.position = muzzle.position;               //设置位置�
 freshMuzzle.velocity = muzzle.forward * 10.0f;                  //设置发射初速度
 ```
 
+<br />
+
+------
+
+## Refactor Controlling Logic
+
+- Tank定义具体游戏逻辑而忽略Input，只在内部对Handler进行注册
+- InputHandler处理Input
+
+### Tank
+
+- **具体游戏逻辑**
+
+  - `Move()`
+  - `Rotate()`
+  - `RotateTurret()`
+  - `RotateGun()`
+  - `Fire()`
+
+- **注册InputHandler**
+
+  ```c#
+  void Start()
+  {
+    TankPlayerInputHandler handler = TankPlayerInputHandler.Instance();
+    handler.Axis1VerticalInputEvent += Move;
+  	//...
+    handler.FireInputEvent += Fire;
+  }
+  ```
+
+  
+
+### TankPlayerInputHandler
+
+- global accessible controller
+
+- **Singleton**: make a class still non-static, but accessible every where in script level
+
+  ```c#
+  /* Singleton */
+  private static TankPlayerInputHandler _sInstance = null;
+  
+  public static TankPlayerInputHandler Instance()
+  {
+    _sInstance = FindObjectOfType<TankPlayerInputHandler>();        //保证整个场景只有一个
+    if(_sInstance == null)
+    {
+      GameObject newObj = new GameObject(name: "TankPlayerInputHandler");
+      _sInstance = newObj.AddComponent<TankPlayerInputHandler>();
+    }
+    return _sInstance;
+  }
+  ```
+
+- **add Events**
+
+  ```c#
+  public event Action<float> Axis1HorizontalInputEvent;
+  //...
+  public event Action FireInputEvent;
+  ```
+
+- **处理Input Event**
+
+  ```c#
+  void Update()
+  {
+    /* 前进 */
+    if (Input.GetKey(KeyCode.W))
+    {
+      if(Axis1VerticalInputEvent != null)
+      {
+        Axis1VerticalInputEvent(1.0f);
+      }
+    }
+    //...
+    //...
+  }
+  ```
+
+  
