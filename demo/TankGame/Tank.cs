@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Tank : MonoBehaviour
+public class Tank : MonoBehaviour, IPointerClickHandler
 {
     public Transform turrentHinge;
     public Transform gunHinge;
@@ -15,15 +16,44 @@ public class Tank : MonoBehaviour
     public Transform muzzle;
     public Rigidbody muzzlePrefab;
 
+    private bool isControlActive;
+
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void SetControlActive(bool isActive)
+    {
         TankPlayerInputHandler handler = TankPlayerInputHandler.Instance();
-        handler.Axis1VerticalInputEvent += Move;
-        handler.Axis1HorizontalInputEvent += Rotate;
-        handler.Axis2VerticalInputEvent += RotateGun;
-        handler.Axis2HorizontalInputEvent += RotateTurret;
-        handler.FireInputEvent += Fire;
+
+        if (isActive != isControlActive)    //第一次点击 => 注册
+        {
+            isControlActive = isActive;
+
+            handler.Axis1VerticalInputEvent += Move;
+            handler.Axis1HorizontalInputEvent += Rotate;
+            handler.Axis2VerticalInputEvent += RotateGun;
+            handler.Axis2HorizontalInputEvent += RotateTurret;
+            handler.FireInputEvent += Fire;
+        }
+        else
+        {
+            isControlActive = !isActive;    //再次点击 => 移除注册信息
+
+            handler.Axis1VerticalInputEvent -= Move;
+            handler.Axis1HorizontalInputEvent -= Rotate;
+            handler.Axis2VerticalInputEvent -= RotateGun;
+            handler.Axis2HorizontalInputEvent -= RotateTurret;
+            handler.FireInputEvent -= Fire;
+        }
+    }
+    
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        TankPlayerInputHandler.Instance().TakeTankControl(this);
     }
 
     public void Move(float factor)

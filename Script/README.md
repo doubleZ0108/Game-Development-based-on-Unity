@@ -244,7 +244,7 @@ public class xxx : MonoBehaviour, IPointerClickHandler
 
 - **Components**
   - `Standalone Input Module`
-  - `Physics Raycaster`
+  - `Physics Raycaster`(禁用camera)
 
 <br />
 

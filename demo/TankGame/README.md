@@ -129,8 +129,6 @@ freshMuzzle.velocity = muzzle.forward * 10.0f;                  //设置发射�
   }
   ```
 
-  
-
 ### TankPlayerInputHandler
 
 - global accessible controller
@@ -180,3 +178,60 @@ freshMuzzle.velocity = muzzle.forward * 10.0f;                  //设置发射�
   ```
 
   
+
+### Register
+
+if there is 2 tanks in the scene, which to control?
+
+点击选中一辆坦克，可以控制它，再次点击取消选择；可以同时选择多个，互不影响
+
+- 不再在`Start()`中直接注册Action
+
+- Event System -> IPointerClickHandler
+
+- **TankPlayerInputHandler**
+
+  ```c#
+  public event Action<bool> SetControlActiveEvent;
+  
+  public void TakeTankControl(Tank tank)
+  {
+    if (SetControlActiveEvent != null)
+    {
+      SetControlActiveEvent(false);
+    }
+    tank.SetControlActive(true);
+  }
+  ```
+
+- **Tank**
+
+  ```c#
+  private bool isControlActive;
+  
+  public void SetControlActive(bool isActive)
+  {
+    TankPlayerInputHandler handler = TankPlayerInputHandler.Instance();
+  
+    if (isActive != isControlActive)    //第一次点击 => 注册
+    {
+      isControlActive = isActive;
+      handler.Axis1VerticalInputEvent += Move;
+      //...
+    }
+    else
+    {
+      isControlActive = !isActive;    //再次点击 => 移除注册信息
+      handler.Axis1VerticalInputEvent -= Move;
+      //...
+    }
+  }
+  
+  public void OnPointerClick(PointerEventData eventData)
+  {
+    TankPlayerInputHandler.Instance().TakeTankControl(this);
+  }
+  ```
+
+  
+

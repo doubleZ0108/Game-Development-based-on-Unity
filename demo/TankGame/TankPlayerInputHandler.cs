@@ -25,7 +25,17 @@ public class TankPlayerInputHandler : MonoBehaviour
     public event Action<float> Axis2VerticalInputEvent;
     public event Action FireInputEvent;
 
-    // Update is called once per frame
+    public event Action<bool> SetControlActiveEvent;
+
+    public void TakeTankControl(Tank tank)
+    {
+        if (SetControlActiveEvent != null)
+        {
+            SetControlActiveEvent(false);
+        }
+        tank.SetControlActive(true);
+    }
+
     void Update()
     {
         /* 前进 后退 */
