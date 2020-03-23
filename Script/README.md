@@ -182,8 +182,21 @@ a function that has the ability to pause execution and return control to Unity, 
 
 ## Time and Framerate Management
 
-- 平滑的移动要乘deltaTime
-- 
+- 平滑的移动要乘`Time.deltaTime`
+
+- how long is a frame?
+
+  - `Window -> Analysis -> Profild`
+
+    <img src="README.assets/image-20200323183533362.png" alt="image-20200323183533362" width="50%;" />
+
+  - length of frame is a arbitrary value, depending on CPU/GPU/IO...
+
+- **Time**
+
+  - `Time.deltaTime`: how long this completion time in seconds since the last frame
+  - `Time.fixedDeltaTime`: how long does the Physics calculation take(可以自己设定的`Project Settings -> Time`)
+  - `Time.timeScale`: change the of the speed at which the game is playing
 
 
 
