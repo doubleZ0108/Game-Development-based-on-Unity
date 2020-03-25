@@ -52,7 +52,8 @@
 
 ## RectTransform & Layout Control Components
 
-
+- Horizontal / Vertical / Grid Layout Group
+- LayoutElement: 控制layout中的子物体
 
 <br/>
 
