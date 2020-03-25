@@ -38,22 +38,18 @@
 
 - **Graphic Raycaster**：用户的点击射线第一个碰到哪个组件
 
-- **Rect Transform**：represent a 2D area instead of a single point
-
-  - dynamic UI layout
-  - **Pivot**: 旋转轴；其他object开起来的位置
-  - **Anchor**：control how each edge of the area 
-
-
-
 <br/>
 
 ------
 
 ## RectTransform & Layout Control Components
 
-- Horizontal / Vertical / Grid Layout Group
-- LayoutElement: 控制layout中的子物体
+- **Rect Transform**：represent a 2D area instead of a single point
+  - dynamic UI layout
+  - **Pivot**: 旋转轴；其他object开起来的位置
+  - **Anchor**：control how each edge of the area 
+- **Horizontal** / **Vertical** / **Grid Layout Group**
+- **LayoutElement**: 控制layout中的子物体
 
 <br/>
 
@@ -63,21 +59,52 @@
 
 ### Text
 
+- work as a <u>label</u>, user cannot edit the text directly in game
+- richtext: bold, italic, ...
+
 ### Image/RawImage
+
+- **RenderTexture**: 将当前camera的图像存下来，作为RawImage的输入（画中画）
+- RawImage is not interactable, but can add a transparent Text/Image over it to receive user input
+- **Sprite**: text和image的中间层
+- **九宫格**
 
 ### Mask
 
+- masking display area of child widgets(mask的子物体受mask影响)
+
+  > 周围有滚动条，只显示一部分
+
 ### Button/Toggle
+
+- **Button**：combine of button and image
+  - OnClickHandler callbacks不建议，最好在代码中动态的注册
+  - some built-in effect setting for interaction
+- **Toggle**
+  - OnValueChangeHandler
+- **ToggleGroup**
+  - 这个object的子物体如果有Toggle，一律被认为是Radio
 
 ### Scroll View
 
+- consits of a ScrollRect and two Scrollbar components
+
+  <img src="README.assets/image-20200325152757691.png" alt="image-20200325152757691" width="50%;" />
+
+  - add sub-items under `Content` GameObject
+
 ### Slider
+
+- provide a result between Min&Max Value
 
 ### Input Field
 
+- not supporting rich text
+- support limiting content type
+
 ### Dropdown
 
-
+- templage is referenced to clone multiple sub-items for each option in the dropdown list
 
 <br/>
 
