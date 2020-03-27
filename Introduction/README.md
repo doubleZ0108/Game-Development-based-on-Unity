@@ -1,6 +1,17 @@
 # Unity知识点🧀️
 
-[toc]
+Table of Contents
+=================
+
+   * [Unity知识点<g-emoji class="g-emoji" alias="cheese" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9c0.png">🧀️</g-emoji>](#unity知识点️)
+      * [Basic Structure of a Unity Game](#basic-structure-of-a-unity-game)
+      * [GameObject](#gameobject)
+         * [Hierarchy - Parenting](#hierarchy---parenting)
+      * [Game](#game)
+      * [Inspector](#inspector)
+      * [Scripts](#scripts)
+      * [Physical System](#physical-system)
+      * [Prefabs](#prefabs)
 
 ------
 
@@ -77,6 +88,9 @@
     ```c#
     this.transform.Translate(Time.deltaTime * 1.0f, 0.0f, 0.0f, Space.Self);
     this.transform.localPosition += transform.forward * 1.0f * Time.deltaTime;	//z轴方向为forward
+    ```
+  ```
+  
   ```
   
 - **旋转**
