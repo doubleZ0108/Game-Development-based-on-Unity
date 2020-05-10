@@ -26,10 +26,12 @@ A game is an <u>experience</u> with defined rules that provides <u>challenges</u
 
 
 
+<img src="README.assets/IMG_AC972D64A292-1.jpeg" alt="IMG_AC972D64A292-1" width="75%;" />
+
 ## References
 
-www.shvfs.cn
+- www.shvfs.cn
+- https://www.gamedesigning.org/game-design-books/
+- GDC on youtube for more info
+- Design Thinking
 
-https://www.gamedesigning.org/game-design-books/
-
-GDC on youtube for more info

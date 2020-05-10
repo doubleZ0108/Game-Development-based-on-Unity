@@ -54,6 +54,14 @@ Table of Contents
 
 
 
+> 【物理帧 和 逻辑帧】
+>
+> Update可能会让子弹穿掩体，前一个deltatime算位置还在掩体外，下一个deltatime计算位置就穿过去了
+>
+> 限制maxUpdateTime可以防止由于物理帧造成对游戏性能瓶颈的影响
+
+
+
 ### Debug Tools
 
 - **Immediate Mode GUI system(IMGUI)**
