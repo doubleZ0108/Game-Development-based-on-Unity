@@ -9,6 +9,7 @@
 ## Course Contents
 
 - [**Introduction**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Introduction)
+  
   - history of video game
   - game industry
   - game development process
@@ -19,6 +20,8 @@
     - Beta
     - Soft Launch
     - Hard Launch
+    
+    <img src="README.assets/image-20200811213102639.png" alt="image-20200811213102639" width="50%;" />
   - game development toolset
     - game engine
     - modelling/animation tools
@@ -28,6 +31,7 @@
     - build machine
     - localization
     - project management tools
+  
 - **Basic Usage of Unity**
   - what is game engine(Unity)?
   - installing Unity
@@ -41,20 +45,29 @@
     - inspector/debug
     - project
   - working with Visual Studio
+  
 - [**Scripting**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Script)
   - mono behaviour events
     - initialization
     - updates
     - on destroy & quit
     - rendering
+    
   - variables
+    
     - serialization
+    
   - components & game objects
     - accessing
     - creating
     - destroying
+    
   - execution order of event functions
+  
+    <img src="README.assets/ExecutionOrder.jpg" alt="ExecutionOrder" width="50%;" />
+  
   - debug tools - IMGUI & Gizmos
+  
   - coroutine
     - background
     - declaration
@@ -62,11 +75,15 @@
     - available conditions
     - behind the scene
     - termination
+    
   - time & frame rate management
     - profiler
     - time settings
+    
   - event system
+  
   - input module & input events
+  
   - special folders in project
     - assets
     - editor
@@ -76,10 +93,12 @@
     - resources
     - standard assets
     - streaming assets
+    
   - commonly used classes
     - resources
     - scene manager
     - application
+  
 - [**UI**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/UI)
   - legacy GUI
   - NGUI
@@ -111,7 +130,9 @@
       - UI designing
       - UI management
       - exercise
+  
 - [**Spirit**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Spirit)
+
 - [**Animation**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Animation)
   - animation overview
   - state machine
@@ -143,6 +164,7 @@
   - behavior tree
     - node types
     - event-driven behaviors
+  
 - **Graphics**
   - lighting
     - light types
@@ -175,6 +197,7 @@
     - bloom
     - anti-aliasing
     - ambient occlusion
+  
 - **Physics**
   - coordinate system
   - vector
@@ -191,6 +214,7 @@
   - joint
   - spring and damper
   - ragdoll
+  
 - **Optimization**
   - performance metrics
   - Unity performance
@@ -200,6 +224,7 @@
   - side effects
   - compute shader
   - profiling
+  
 - [**Path Finding**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Path%20Finding)
   - floodfill algo
   - A\* algo
@@ -207,17 +232,31 @@
   - difficulties
   - bomberman AI summary
   - nev mesh in Unity3D
+  
 - [**Game Design**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Game%20Design)
 
-<img src="README.assets/image-20200811213230521.png" alt="image-20200811213230521" width="67%;" />
+![Game Development](README.assets/Game Development.png)
 
-## Game Development Process
+<br/>
 
-1. 
+## Course Demo
 
-<img src="README.assets/image-20200811213102639.png" alt="image-20200811213102639" width="50%;" />
+- [tank game](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/demo/TankGame)
+  - model
+  - tank-style maneuver logic
+  - refactor controlling logic
 
-## Game Execution Order
+<br/>
 
-<img src="README.assets/ExecutionOrder.jpg" alt="ExecutionOrder" width="50%;" />
+## About the Author
+
+| Name     | 张喆                                                |
+| -------- | --------------------------------------------------- |
+| 技术指导 | 维塔士公司                                          |
+| 课程名称 | 游戏程序设计                                        |
+| 联系方式 | [dbzdbz@tongji.edu.cn](mailto:dbzdbz@tongji.edu.cn) |
+
+
+
+
 

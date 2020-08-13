@@ -1,6 +1,16 @@
 # Tank Game
 
-[toc]
+* [Model](#model)
+   * [Coordinate System Scaling](#coordinate-system-scaling)
+* [Tank-Style Maneuver Logic](#tank-style-maneuver-logic)
+   * [1. Add public fields and Assign objects](#1-add-public-fields-and-assign-objects)
+   * [2. Movement](#2-movement)
+   * [3. Turret Behavior](#3-turret-behavior)
+   * [4. Shooting Logic](#4-shooting-logic)
+* [Refactor Controlling Logic](#refactor-controlling-logic)
+   * [Tank](#tank)
+   * [TankPlayerInputHandler](#tankplayerinputhandler)
+   * [Register](#register)
 
 ------
 
