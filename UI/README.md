@@ -1,23 +1,19 @@
 # UI
 
-Table of Contents
-=================
-
-   * [UI](#ui)
-      * [Classification](#classification)
-      * [Canvas](#canvas)
-      * [RectTransform &amp; Layout Control Components](#recttransform--layout-control-components)
-      * [UI Widgets](#ui-widgets)
-         * [Text](#text)
-         * [Image/RawImage](#imagerawimage)
-         * [Mask](#mask)
-         * [Button/Toggle](#buttontoggle)
-         * [Scroll View](#scroll-view)
-         * [Slider](#slider)
-         * [Input Field](#input-field)
-         * [Dropdown](#dropdown)
-      * [RaycastTarget, Interactable &amp; CanvasGroup](#raycasttarget-interactable--canvasgroup)
-      * [Sort Order](#sort-order)
+* [Classification](#classification)
+* [Canvas](#canvas)
+* [RectTransform &amp; Layout Control Components](#recttransform--layout-control-components)
+* [UI Widgets](#ui-widgets)
+   * [Text](#text)
+   * [Image/RawImage](#imagerawimage)
+   * [Mask](#mask)
+   * [Button/Toggle](#buttontoggle)
+   * [Scroll View](#scroll-view)
+   * [Slider](#slider)
+   * [Input Field](#input-field)
+   * [Dropdown](#dropdown)
+* [RaycastTarget, Interactable &amp; CanvasGroup](#raycasttarget-interactable--canvasgroup)
+* [Sort Order](#sort-order)
 
 ------
 

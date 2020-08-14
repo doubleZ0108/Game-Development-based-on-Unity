@@ -1,6 +1,8 @@
 # Path Finding | 寻路算法
 
-[toc]
+* [Floodfill Algo | 泛洪算法](#floodfill-algo--泛洪算法)
+* [A* Algo](#a-algo)
+* [Nav Mesh in Unity](#nav-mesh-in-unity)
 
 ------
 

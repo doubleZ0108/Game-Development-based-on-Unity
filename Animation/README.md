@@ -1,6 +1,8 @@
 # Animation
 
-[toc]
+* [Animation &amp; State Machine](#animation--state-machine)
+* [Animation System](#animation-system)
+* [Animator Controller](#animator-controller)
 
 ------
 

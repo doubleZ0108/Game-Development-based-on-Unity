@@ -1,6 +1,8 @@
 # Design in Games
 
-[toc]
+* [What is a game?](#what-is-a-game)
+* [Gamer Psychology](#gamer-psychology)
+* [References](#references)
 
 ------
 

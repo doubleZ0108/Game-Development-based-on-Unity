@@ -1,17 +1,13 @@
 # Unity知识点🧀️
 
-Table of Contents
-=================
-
-   * [Unity知识点<g-emoji class="g-emoji" alias="cheese" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9c0.png">🧀️</g-emoji>](#unity知识点️)
-      * [Basic Structure of a Unity Game](#basic-structure-of-a-unity-game)
-      * [GameObject](#gameobject)
-         * [Hierarchy - Parenting](#hierarchy---parenting)
-      * [Game](#game)
-      * [Inspector](#inspector)
-      * [Scripts](#scripts)
-      * [Physical System](#physical-system)
-      * [Prefabs](#prefabs)
+* [Basic Structure of a Unity Game](#basic-structure-of-a-unity-game)
+* [GameObject](#gameobject)
+   * [Hierarchy - Parenting](#hierarchy---parenting)
+* [Game](#game)
+* [Inspector](#inspector)
+* [Scripts](#scripts)
+* [Physical System](#physical-system)
+* [Prefabs](#prefabs)
 
 ------
 

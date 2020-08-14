@@ -1,6 +1,7 @@
 # AI
 
-[toc]
+* [十个经典的AI设计模式](#十个经典的ai设计模式)
+* [AI Framework](#ai-framework)
 
 ------
 

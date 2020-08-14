@@ -1,21 +1,17 @@
 # Scipting in Unity
 
-Table of Contents
-=================
-
-   * [Scipting in Unity](#scipting-in-unity)
-      * [Introduction](#introduction)
-      * [Mono Behavior Events](#mono-behavior-events)
-         * [Event Functions](#event-functions)
-         * [Debug Tools](#debug-tools)
-      * [Variables](#variables)
-      * [Components &amp; GameObjects](#components--gameobjects)
-      * [Coroutine](#coroutine)
-      * [Time and Framerate Management](#time-and-framerate-management)
-      * [Event System](#event-system)
-      * [Input Module &amp; Input Event](#input-module--input-event)
-      * [Folders in Project](#folders-in-project)
-      * [Commonly Used Classes](#commonly-used-classes)
+* [Introduction](#introduction)
+* [Mono Behavior Events](#mono-behavior-events)
+   * [Event Functions](#event-functions)
+   * [Debug Tools](#debug-tools)
+* [Variables](#variables)
+* [Components &amp; GameObjects](#components--gameobjects)
+* [Coroutine](#coroutine)
+* [Time and Framerate Management](#time-and-framerate-management)
+* [Event System](#event-system)
+* [Input Module &amp; Input Event](#input-module--input-event)
+* [Folders in Project](#folders-in-project)
+* [Commonly Used Classes](#commonly-used-classes)
 
 ------
 
