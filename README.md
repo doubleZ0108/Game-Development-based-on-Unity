@@ -2,11 +2,15 @@
 
 --- based on Unity
 
-[toc]
+* [Body of Knowledge](#body-of-knowledge)
+* [Project Structure](#project-structure)
+* [About the Author](#about-the-author)
 
 ------
 
-## Body of Knowledge![Game Development](README.assets/Game Development.png)
+## Body of Knowledge
+
+![Game Development](README.assets/Game Development.png)
 
 <br/>
 
@@ -44,8 +48,3 @@
 | 技术指导 | 维塔士公司                                          |
 | 课程名称 | 游戏程序设计                                        |
 | 联系方式 | [dbzdbz@tongji.edu.cn](mailto:dbzdbz@tongji.edu.cn) |
-
-
-
-
-
