@@ -10,7 +10,7 @@
 
 ## Body of Knowledge
 
-![Game Development](README.assets/Game Development.png)
+![Game Development.png](https://upload-images.jianshu.io/upload_images/12014150-ff3553f9d60a7aa6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <br/>
 

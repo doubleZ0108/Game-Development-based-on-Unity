@@ -211,3 +211,11 @@
   - bomberman AI summary
   - nev mesh in Unity3D
 - [**Game Design**](https://github.com/doubleZ0108/Game-Development-based-on-Unity/tree/master/Game%20Design)
+
+
+
+<img src="https://upload-images.jianshu.io/upload_images/12014150-9271f2a5fb568c3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ExecutionOrder.jpg" style="zoom:50%;" />
+
+
+
+![image-20200811213102639.png](https://upload-images.jianshu.io/upload_images/12014150-f6ca7aba40975c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
